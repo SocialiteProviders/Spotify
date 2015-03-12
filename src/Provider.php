@@ -7,7 +7,6 @@ use Laravel\Socialite\Two\User;
 
 class Provider extends AbstractProvider implements ProviderInterface
 {
-
     /**
      * The separating character for the requested scopes.
      *
