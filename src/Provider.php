@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\Spotify;
 
 use Laravel\Socialite\Two\AbstractProvider;
@@ -40,12 +41,12 @@ class Provider extends AbstractProvider implements ProviderInterface
         $response = $this->getHttpClient()->get(
             'https://api.spotify.com/v1/me', [
             'headers' => [
-                'Accept'        => 'application/json',
+                'Accept' => 'application/json',
                 'Authorization' => 'Bearer '.$token,
             ],
         ]);
 
-        return json_decode($response->getBody(), true);
+        return json_decode($response->getBody()->getContents(), true);
     }
 
     /**

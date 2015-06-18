@@ -1,4 +1,5 @@
 <?php
+
 namespace SocialiteProviders\Spotify;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
